@@ -158,9 +158,9 @@ function Dashboard() {
             <div className="font-light text-sm">tài khoản</div>
           </div>
 
-          <div class="w-full bg-red-200 rounded-full h-4 mb-10">
+          <div class="w-full bg-green-200 rounded-full h-4 mb-10">
             <div
-              class="bg-red-400 h-4 rounded-full"
+              class="bg-green-400 h-4 rounded-full"
               style={{ width: "45%" }}
             ></div>
           </div>

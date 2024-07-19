@@ -27,7 +27,7 @@ export default function StatisticalProduct() {
       </div>
 
       <div className="rounded-xl overflow-hidden">
-      <div className="flex justify-between items-center bg-red-200 py-1 px-5">
+      <div className="flex justify-between items-center bg-green-200 py-1 px-5">
           <div className="font-medium text-xl">Bộ lọc</div>
           <div className="flex items-end">
            
@@ -51,11 +51,11 @@ export default function StatisticalProduct() {
 
         <div className='flex'>
             <div className='w-1/4 px-2 py-2'>
-                <div className='text-center py-3 text-lg font-medium bg-red-200 rounded-lg'>Tất cả</div>
+                <div className='text-center py-3 text-lg font-medium bg-green-200 rounded-lg'>Tất cả</div>
             </div>
-            <div className='w-1/4 px-2 py-2'><div className='text-center py-3 text-lg bg-red-200 rounded-lg'>Sữa Bột</div></div>
-            <div className='w-1/4 px-2 py-2'><div className='text-center py-3 text-lg bg-red-200 rounded-lg'>Bột Ăn Dặm</div></div>
-            <div className='w-1/4 px-2 py-2'><div className='text-center py-3 text-lg bg-red-200 rounded-lg'>Bánh Ăn Dặm</div></div>
+            <div className='w-1/4 px-2 py-2'><div className='text-center py-3 text-lg bg-green-200 rounded-lg'>Sữa Bột</div></div>
+            <div className='w-1/4 px-2 py-2'><div className='text-center py-3 text-lg bg-green-200 rounded-lg'>Bột Ăn Dặm</div></div>
+            <div className='w-1/4 px-2 py-2'><div className='text-center py-3 text-lg bg-green-200 rounded-lg'>Bánh Ăn Dặm</div></div>
         </div>
 
         <div className='px-10 my-10'>

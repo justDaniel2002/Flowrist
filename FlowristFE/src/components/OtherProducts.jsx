@@ -13,7 +13,7 @@ const OtherProducts = () => {
   }, []);
   return (
     <div>
-      <div className="text-red-300 font-bold text-3xl">Các sản phẩm khác</div>
+      <div className="text-green-300 font-bold text-3xl">Các sản phẩm khác</div>
       <div className="text-neutral-400 font-bold text-2xl text-right">
         Xem tất cả
       </div>

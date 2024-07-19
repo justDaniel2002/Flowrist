@@ -62,7 +62,7 @@ export default function Register() {
   return (
     <div className="flex items-center min-h-screen">
       <div className="w-4/5 m-auto font-light">
-        <img src={milmomtext} className="w-3/5 mb-20" />
+      <div className="text-green-300 text-6xl mb-5 tracking-[20px]">FLOWRIST</div>
         <div className="grid grid-cols-2 gap-7 mb-10">
           <div className="mb-3">
             <div className="mb-4 ">Tên Tài khoản</div>

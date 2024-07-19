@@ -24,14 +24,14 @@ export default function ProfileOrder() {
       <div className="flex justify-around font-medium py-3 bg-white border border-neutral-400 text-xl">
         <div
           onClick={() => setSelectedStatus(-1)}
-          className={`${selectedStatus == -1 ? "text-red-300" : ""}`}
+          className={`${selectedStatus == -1 ? "text-green-300" : ""}`}
         >
           Tất cả
         </div>{" "}
         {orderStatus.map((os) => (
           <div
             onClick={() => setSelectedStatus(os.id)}
-            className={`${selectedStatus == os.id ? "text-red-300" : ""}`}
+            className={`${selectedStatus == os.id ? "text-green-300" : ""}`}
           >
             {os.content}
           </div>

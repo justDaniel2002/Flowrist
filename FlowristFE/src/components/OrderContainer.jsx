@@ -29,7 +29,7 @@ export default function OrderContainer({ order }) {
             </div>
           </div>
           <div className="p-3">
-            <div className="flex justify-end text-red-400">
+            <div className="flex justify-end text-green-400">
               THÀNH TIỀN {formatCurrency(od?.totalAmount)} VND
             </div>
             <div className="flex justify-end mt-3">
@@ -92,10 +92,10 @@ const StatusGen = (status) => {
     case 3:
       return <span className="text-green-500">ĐÃ HOÀN TẤT </span>;
     case 4:
-      return <span className="text-red-500">CHỜ HOÀN TIỀN </span>;
+      return <span className="text-green-500">CHỜ HOÀN TIỀN </span>;
     case 5:
-      return <span className="text-red-500">YÊU CẦU TRẢ HÀNG</span>;
+      return <span className="text-green-500">YÊU CẦU TRẢ HÀNG</span>;
     case 6:
-      return <span className="text-red-500">ĐÃ HỦY </span>;
+      return <span className="text-green-500">ĐÃ HỦY </span>;
   }
 };

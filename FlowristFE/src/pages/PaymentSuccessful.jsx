@@ -69,7 +69,7 @@ export default function PaymentSuccessful() {
         <div className="w-1/3">
           <div className="mb-3 border">
             <div className="bg-slate-200 p-3">PHƯƠNG THỨC THANH TOÁN</div>
-            <div className="text-center py-5 text-red-600">Ship Cod</div>
+            <div className="text-center py-5 text-green-600">Ship Cod</div>
           </div>
           <div className="border p-3 mb-3 pb-40">
             <div className="flex justify-between">
@@ -81,7 +81,7 @@ export default function PaymentSuccessful() {
 
             <div className="flex justify-between items-center">
               <div>Cần thanh toán:</div>
-              <div className="text-xl text-red-600">2.550.000 đ</div>
+              <div className="text-xl text-green-600">2.550.000 đ</div>
             </div>
             <div className="flex justify-between text-sm text-neutral-400">
               <div>(1 sản phẩm)</div>

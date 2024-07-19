@@ -24,7 +24,7 @@ export default function Cart() {
   const navigate = useNavigate();
 
   const total = useMemo(() => {
-    const totalPrice = cart.reduce((accumulator, item) => {
+    const totalPrice = cart.greenuce((accumulator, item) => {
       return accumulator + item.product.purchasePrice;
     }, 0);
     return totalPrice;
@@ -117,7 +117,7 @@ export default function Cart() {
   }, [provines]);
   return (
     <div className="px-5">
-      <div className="text-red-300 font-bold text-2xl mb-5">
+      <div className="text-green-300 font-bold text-2xl mb-5">
         Giỏ hàng của bạn
       </div>
       <div className="flex mb-10">
@@ -157,7 +157,7 @@ export default function Cart() {
           </div>
         </div>
         <div className="w-1/5 font-medium">
-          <div className="border bg-red-300 border-black rounded-xl p-3 mb-5">
+          <div className="border bg-green-300 border-black rounded-xl p-3 mb-5">
             <div className="text-lg mb-3 text-center">Thông tin người nhận</div>
             <div className="mb-3">
               <div className="pl-2 mb-2">Họ và tên: </div>
@@ -250,7 +250,7 @@ export default function Cart() {
               />
             </div>
           </div>
-          <div className="border border-black rounded-xl p-3 bg-red-300 font-medium text-sm">
+          <div className="border border-black rounded-xl p-3 bg-green-300 font-medium text-sm">
             <div className="text-center mb-3">Chọn phương thức thanh toán</div>
 
             <div className="bg-white border flex items-center py-2 px-5 border-black rounded-2xl w-full mb-3">

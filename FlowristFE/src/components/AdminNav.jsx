@@ -6,7 +6,7 @@ export default function AdminNav() {
   return (
     <div className="flex justify-between items-center p-3">
       <div className="flex items-end">
-        <div className="flex font-medium text-3xl text-red-300"><span className="text-blue-950">Mil</span>Mom</div>
+        <div className="flex font-medium text-3xl text-green-300"><span className="text-blue-950">Mil</span>Mom</div>
         <span className="font-bold text-neutral-600 tracking-wider"> , Welcome admin</span>
       </div>
 

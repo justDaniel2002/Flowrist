@@ -10,8 +10,9 @@ import topic6 from '../assets/topic6.png'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { getCurrentDate } from '../helper/helper'
 import { formatCurrency } from '../helpers/helper'
+import hoaimg from '../assets/flowerbanner.jpg'
 
-export const DEFAULT_IMG = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx0pWMi3w72H4-7lvJf5laNUWsZr9bRw1b6Q&s"
+export const DEFAULT_IMG = hoaimg
 export const navbarData = [
     {
         content:"Mua hàng và CSKH 1800 8080",
@@ -56,49 +57,49 @@ export const emptyAvatar =  "https://t4.ftcdn.net/jpg/03/59/58/91/360_F_35958918
 
 export const homeBanner = [
     {
-        content:"Sữa bột",
-        imageURL:suabot
+        content:"Hoa hàng năm",
+        imageURL:hoaimg
     },
     {
-        content:"Bột ăn dặm",
-        imageURL:botandam
+        content:"Hoa hai năm",
+        imageURL:hoaimg
     },
     {
-        content:"Bánh ăn dặm",
-        imageURL:banhandam
+        content:"Hoa lâu năm",
+        imageURL:hoaimg
     }
 ]
 
 export const momMilTopics = [
     {
-        content:"Chăm sóc trẻ theo độ tuổi",
+        content:"Chăm sóc trẻ cây hoa",
         link:"",
-        imageURL:topic
+        imageURL:hoaimg
     },
     {
-        content:"Dinh dưỡng cho bé",
+        content:"Dinh dưỡng cho cây",
         link:"",
-        imageURL:topic2
+        imageURL:hoaimg
     },
     {
-        content:"Dinh dưỡng cho mẹ bầu",
+        content:"Dinh dưỡng cho hoa",
         link:"",
-        imageURL:topic3
+        imageURL:hoaimg
     },
     {
-        content:"Các bệnh thường gặp ở trẻ em",
+        content:"Các dấu hiệu bất thường gặp ở cây hoa",
         link:"",
-        imageURL:topic4
+        imageURL:hoaimg
     },
     {
-        content:"Khi mẹ mang thai",
+        content:"Khi cây sinh trưởng",
         link:"",
-        imageURL:topic5
+        imageURL:hoaimg
     },
     {
-        content:"Thông tin bệnh viện phòng khám",
+        content:"Thông tin khác",
         link:"",
-        imageURL:topic6
+        imageURL:hoaimg
     }
 ]
 

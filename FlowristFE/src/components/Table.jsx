@@ -106,7 +106,7 @@ export const orderHeader = [
 ];
 
 
-function Table({indexHeader=undefined, bg="bg-red-300", headerTable, datas=[], isDelete = true, onDelete = () => {}, next = () => {} }) {
+function Table({indexHeader=undefined, bg="bg-green-300", headerTable, datas=[], isDelete = true, onDelete = () => {}, next = () => {} }) {
   return (
     <div>
       <table>

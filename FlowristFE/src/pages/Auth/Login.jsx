@@ -8,6 +8,7 @@ import { useRecoilState } from "recoil";
 import { accountAtom } from "../../atom/accountAtom";
 import { toast } from "react-toastify";
 import { setAuthToken } from "../../api/axios.config";
+import FlowristLogo from "../../components/FlowristLogo";
 export default function Login() {
   const [accountA, setAccountAtom] = useRecoilState(accountAtom)
   const [account, setAccount] = useState({
@@ -51,7 +52,7 @@ export default function Login() {
   return (
     <div className="flex items-center min-h-screen">
       <div className="w-2/3 m-auto">
-        <img className="w-full mb-2" src={milmomtext} />
+      <div className="text-green-300 text-6xl mb-5 tracking-[20px]">FLOWRIST</div>
         <div className="font-medium text-neutral-500 text-sm mb-5">
           Đăng nhập để trải nghiệm đầy đủ dịch vụ và thông tin hơn
         </div>
@@ -97,7 +98,7 @@ export default function Login() {
         <div className="text-center w-4/5 mb-3">
           <Link to={"/register"} className="text-neutral-500">
             Bạn chưa có tài khoản ?{" "}
-            <span className="text-red-300 font-medium">Đăng ký ngay</span>
+            <span className="text-green-300 font-medium">Đăng ký ngay</span>
           </Link>
         </div>
       </div>

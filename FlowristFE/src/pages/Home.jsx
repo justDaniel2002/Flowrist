@@ -4,17 +4,18 @@ import apphich from "../assets/apphich.png";
 import OtherProducts from "../components/OtherProducts";
 import BannerMilMom from "../assets/bannerMilMom.png";
 import SliderReact from "../components/Slider";
+import flowerBanner2 from "../assets/flowerBanner2.jpg"
 
 export default function Home() {
   return (
     <div className="py-20 px-10">
       <input
-        className="block m-auto w-4/6 rounded-xl border-2 border-red-300 shadow-lg p-2 text-neutral-500 mb-20"
-        placeholder="ba mẹ tìm gì hôm nay ?"
+        className="block m-auto w-4/6 rounded-xl border-2 border-green-300 shadow-lg p-2 text-neutral-500 mb-20"
+        placeholder="Tìm gì hôm nay ?"
       />
 
-      <div className="w-full bg-red-300 rounded-xl py-10 px-20">
-        <div className="text-4xl font-medium mb-20">Các loại sản phẩm cho bé</div>
+      <div className="w-full bg-green-300 rounded-xl py-10 px-20">
+        <div className="text-4xl font-medium mb-20">Các loại sản phẩm </div>
 
         <div className="flex">
           {homeBanner.map((banner,index) => (
@@ -31,7 +32,7 @@ export default function Home() {
         <div className="w-1/5 rounded-xl pr-10">
           <img className="rounded-xl" src={apphich} />
         </div>
-        <div className="w-4/5 bg-red-300 rounded-xl"></div>
+        <div className="w-4/5 bg-green-300 rounded-xl"></div>
       </div>
 
       <OtherProducts />
@@ -41,7 +42,7 @@ export default function Home() {
           Các chủ đề dành cho mẹ và bé
         </div>
         <div className="flex">
-          <div className="w-1/4 rounded-xl p-5 bg-red-300">
+          <div className="w-1/4 rounded-xl p-5 bg-green-300">
             <div className="font-bold mb-10">6 chủ đề dành cho mẹ và bé</div>
             {momMilTopics.map((topic, index) => (
               <div className="mb-5">
@@ -60,7 +61,7 @@ export default function Home() {
         </div>
       </div>
 
-      <img className="w-full rounded-xl" src={BannerMilMom} />
+      <div className="px-80"><img className="w-full rounded-xl" src={flowerBanner2} /></div>
     </div>
   );
 }

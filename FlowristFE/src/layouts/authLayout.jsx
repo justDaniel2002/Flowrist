@@ -3,6 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { accountAtom } from "../atom/accountAtom";
 import { useRecoilState } from "recoil";
+import { Icon } from "@iconify/react/dist/iconify.js";
 export default function AuthLayout({ width = "w-1/2" }) {
   const [account, setAccount] = useRecoilState(accountAtom);
 
@@ -20,16 +21,16 @@ export default function AuthLayout({ width = "w-1/2" }) {
   });
   return (
     <div className="flex">
-      <div className={`${width} flex items-center bg-red-300 min-h-screen`}>
+      <div className={`${width} flex items-center bg-green-300 min-h-screen`}>
         <div>
-          <img src={logo} className={`m-auto w-2/4 rounded-full mb-3`} />
+        <Icon icon="tabler:flower" className=" m-auto mb-5 text-9xl text-white"/>
           <div
             className={`text-white text-wrap ${
               width == "w-1/2" ? "px-32" : "px-10"
             } text-center text-lg`}
           >
-            "Hãy bước vào thế giới tuyệt vời của mẹ và bé - đăng nhập ngay để
-            tối ưu hóa mọi hoạt động và chăm sóc sức khỏe của bạn!"
+            "Hãy bước vào thế giới tuyệt vời của cây và hoa - đăng nhập ngay để
+            tối ưu hóa mọi hoạt động và chăm sóc cây hoa của bạn!"
           </div>
         </div>
       </div>

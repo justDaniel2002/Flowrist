@@ -121,10 +121,10 @@ export default function EditProduct({
         <div className="mb-20">
           <div className="mb-2 font-medium">Ngày hết hạn </div>
           <input
-            value={convertDateFormat(product?.expiredDate)}
+            value={convertDateFormat(product?.expigreenDate)}
             type="date"
             onChange={(event) =>
-              setProduct({ ...product, expiredDate: convertToIOFormat(event.target.value) })
+              setProduct({ ...product, expigreenDate: convertToIOFormat(event.target.value) })
             }
             className="p-2 w-4/5 text-neutral-500 border-2 rounded-md"
           />
@@ -132,9 +132,9 @@ export default function EditProduct({
         <div className="mb-20">
           <div className="mb-2 font-medium">Thành phần </div>
           <input
-            value={product?.ingredient}
+            value={product?.inggreenient}
             onChange={(event) =>
-              setProduct({ ...product, ingredient: event.target.value })
+              setProduct({ ...product, inggreenient: event.target.value })
             }
             className="p-2 w-4/5 text-neutral-500 border-2 rounded-md"
           />

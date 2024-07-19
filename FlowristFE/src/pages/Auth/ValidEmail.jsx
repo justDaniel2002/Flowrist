@@ -3,7 +3,7 @@ import milmom from "../../assets/milmom.png";
 import { Link } from "react-router-dom";
 export default function ValidEmail() {
   return (
-    <div className="flex items-center min-h-screen bg-red-300 ">
+    <div className="flex items-center min-h-screen bg-green-300 ">
       <div className="m-auto w-2/5 bg-white rounded-md px-10 py-5">
         <img src={milmom} className="m-auto mb-10 w-3/5" />
         <div className="text-2xl font-medium mb-5">Đặt lại mật khẩu</div>

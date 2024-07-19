@@ -7,7 +7,7 @@ function ProductContainer({ product }) {
   return (
     <div className="rounded-xl shadow-lg">
       <div className="rounded-xl h-60 overflow-hidden">
-        <img className="m-auto" src={product?.imageProducts?product?.imageProducts[0].image:DEFAULT_IMG} />
+        <img className="m-auto" src={product?.imageProducts?product?.imageProducts[0]?.image:DEFAULT_IMG} />
       </div>
      <div className="p-5">
      <div className="font-medium truncate">{product?.name}</div>
@@ -18,7 +18,7 @@ function ProductContainer({ product }) {
         <Icon icon="material-symbols:star" />
         <Icon icon="material-symbols:star" />
       </div>
-      <div className="text-lg text-red-300 flex justify-between">
+      <div className="text-lg text-green-300 flex justify-between">
         <div>{formatCurrency(product?.purchasePrice??0)}</div>
 
         <Icon icon="mdi:cart" />

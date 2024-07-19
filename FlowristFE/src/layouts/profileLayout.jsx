@@ -9,7 +9,7 @@ export default function ProfileLayout() {
   const [account, setAccount] = useRecoilState(accountAtom);
   const navigate = useNavigate();
   return (
-    <div className="bg-red-100 px-20 pb-40 pt-10 flex">
+    <div className="bg-green-100 px-20 pb-40 pt-10 flex">
       <div className="w-1/5 px-10">
         <div className="flex items-center">
           <img src={emptyAvatar} className="w-1/6 mr-5 rounded-full" />
@@ -20,7 +20,7 @@ export default function ProfileLayout() {
           <div
             onClick={() => navigate(data.link)}
             className={`w-full flex items-center rounded-xl py-1 px-5 mb-1 ${
-              location.pathname == data.link ? "bg-red-300" : "bg-red-100"
+              location.pathname == data.link ? "bg-green-300" : "bg-green-100"
             }`}
           >
             <div

@@ -2,16 +2,15 @@ import React, { memo } from "react";
 import { footerContent1, footerContent2, footerData } from "../data/data";
 import MilMomBtn from "./MilMomBtn";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import logo from "../assets/logo.png";
-import milmom from "../assets/milmom.png";
+import FlowristLogo from "./FlowristLogo";
 
 const Footer = () => {
   return (
     <div className="flex py-20 px-20 tracking-wide">
       <div className="w-1/5 text-wrap px-10">
         <div className="flex items-center">
-          <img src={logo} className="w-1/4" />
-          <img src={milmom} />
+        <Icon icon="tabler:flower" className="block w-1/4 text-4xl text-green-300"/>
+        <FlowristLogo />
         </div>
         <div className="mb-3">{footerContent1}</div>
         <div>{footerContent2}</div>

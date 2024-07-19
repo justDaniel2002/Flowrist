@@ -220,7 +220,7 @@ export const productManagerHeader = [
     width: "w-1/12",
     format: (product) => (
       <span
-        className={`${product?.status ? "text-green-500" : "text-red-500"}`}
+        className={`${product?.status ? "text-green-500" : "text-green-500"}`}
       >
         {product?.status ? "Active" : "Deactive"}
       </span>
@@ -230,7 +230,7 @@ export const productManagerHeader = [
 
 function ManagerTable({
   indexHeader = undefined,
-  bg = "bg-red-300",
+  bg = "bg-green-300",
   headerTable,
   datas = [],
   isDelete = true,
@@ -299,7 +299,7 @@ function ManagerTable({
                       <button onClick={hidden}>
                         <Icon icon="charm:menu-kebab" />
                       </button>
-                      <div className="hidden absolute p-3 border border-red-300 rounded-lg bg-white right-5">
+                      <div className="hidden absolute p-3 border border-green-300 rounded-lg bg-white right-5">
                         {isApprove && (
                           <MilMomBtn
                             onClick={() => onApprove(data)}

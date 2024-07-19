@@ -47,7 +47,7 @@ function OrderManager() {
   }, [status, date]);
   return (
     <div className="py-5">
-      <div className="py-5 bg-red-100 rounded-lg min-h-screen text-sm">
+      <div className="py-5 bg-green-100 rounded-lg min-h-screen text-sm">
         <div className="text-3xl font-medium mb-5">Quản lý đơn hàng</div>
         <div className="flex font-medium my-10 text-lg">
           {orderStatus.map((s) => (

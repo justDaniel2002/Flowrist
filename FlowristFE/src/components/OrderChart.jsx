@@ -17,7 +17,7 @@ export default function OrderChart() {
       </div>
 
       <div className="rounded-xl overflow-hidden">
-        <div className="flex justify-between items-center bg-red-200 py-1 px-5">
+        <div className="flex justify-between items-center bg-green-200 py-1 px-5">
           <div className="font-medium text-xl">Bộ lọc</div>
           <div className="flex items-end">
             <div className="mr-3">

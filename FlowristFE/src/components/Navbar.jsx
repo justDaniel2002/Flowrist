@@ -8,6 +8,7 @@ import milmom from "../assets/milmom.png";
 import { useRecoilState } from "recoil";
 import { accountAtom } from "../atom/accountAtom";
 import { toast } from "react-toastify";
+import FlowristLogo from "./FlowristLogo";
 
 const Navbar = () => {
   const [account, setAccount] = useRecoilState(accountAtom);
@@ -19,8 +20,8 @@ const Navbar = () => {
         onClick={() => navigate("/")}
         className="w-1/6 flex items-center px-5"
       >
-        <img src={logo} className="w-1/4" />
-        <img src={milmom} />
+        <Icon icon="tabler:flower" className="block w-1/4 text-6xl text-green-300"/>
+        <FlowristLogo />
       </div>
       <div className="w-3/6 flex items-center justify-evenly px-20">
         {navbarData.map((data) => (
@@ -43,7 +44,7 @@ const Navbar = () => {
           }}
           icon="mdi:cart"
           className={`text-3xl ${
-            location.pathname == "/Cart" && "text-red-300"
+            location.pathname == "/Cart" && "text-green-300"
           }`}
         />
         <Icon icon="tabler:bell-ringing-2-filled" className="text-3xl" />

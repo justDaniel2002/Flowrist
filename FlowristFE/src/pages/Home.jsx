@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { homeBanner, momMilTopics } from "../data/data";
 import apphich from "../assets/apphich.png";
 import OtherProducts from "../components/OtherProducts";
 import BannerMilMom from "../assets/bannerMilMom.png";
 import SliderReact from "../components/Slider";
-import flowerBanner2 from "../assets/flowerBanner2.jpg"
+import flowerBanner2 from "../assets/flowerBanner2.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
   return (
     <div className="py-20 px-10">
       <input
+        value={search}
+        onChange={(event) => setSearch(event.target.value)}
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            navigate(`/productList/${search}`)
+          }
+        }}
         className="block m-auto w-4/6 rounded-xl border-2 border-green-300 shadow-lg p-2 text-neutral-500 mb-20"
         placeholder="Tìm gì hôm nay ?"
       />
@@ -18,11 +28,14 @@ export default function Home() {
         <div className="text-4xl font-medium mb-20">Các loại sản phẩm </div>
 
         <div className="flex">
-          {homeBanner.map((banner,index) => (
+          {homeBanner.map((banner, index) => (
             <div key={index} className="w-1/3">
-              <div className="text-center text-3xl font-medium mb-10">{index+1}. {banner.content}</div>
-              <div className="w-1/2 bg-white rounded-xl m-auto"><img className="rounded-xl" src={banner.imageURL} /></div>
-              
+              <div className="text-center text-3xl font-medium mb-10">
+                {index + 1}. {banner.content}
+              </div>
+              <div className="w-1/2 bg-white rounded-xl m-auto">
+                <img className="rounded-xl" src={banner.imageURL} />
+              </div>
             </div>
           ))}
         </div>
@@ -37,7 +50,7 @@ export default function Home() {
 
       <OtherProducts />
 
-      <div className="my-10">
+      {/* <div className="my-10">
         <div className="text-4xl mb-10 font-medium ">
           Các chủ đề dành cho mẹ và bé
         </div>
@@ -59,9 +72,11 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="px-80"><img className="w-full rounded-xl" src={flowerBanner2} /></div>
+      <div className="px-80">
+        <img className="w-full rounded-xl" src={flowerBanner2} />
+      </div>
     </div>
   );
 }

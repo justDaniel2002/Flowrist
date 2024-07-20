@@ -40,6 +40,7 @@ import Profile from "./pages/Profile";
 import ProfileEdit from "./pages/ProfileEdit";
 import ChangePassword from "./pages/ChangePassword";
 import ProfileOrder from "./pages/ProfileOrder";
+import ProductList from "./pages/ProductList";
 function App() {
   const [provines, setProvines] = useRecoilState(provinesAtom);
 
@@ -70,7 +71,8 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="productDetail/:id" element={<ProductDetail />} />
-
+          <Route path="productList/:searchParam" element={<ProductList />} />
+          <Route path="productList" element={<ProductList />} />
           <Route element={<ProtectedLayout />}>
             <Route path="cart" element={<Cart />} />
             <Route path="profile" element={<ProfileLayout />}>

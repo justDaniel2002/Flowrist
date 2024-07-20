@@ -3,7 +3,7 @@ import ProductContainer from "./ProductContainer";
 import { detailProduct } from "../data/data";
 import { getService } from "../api/services";
 import { getViewProduct } from "../api/apis";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const OtherProducts = () => {
   const [products, setProducts] = useState([]);
@@ -14,9 +14,9 @@ const OtherProducts = () => {
   return (
     <div>
       <div className="text-green-300 font-bold text-3xl">Các sản phẩm khác</div>
-      <div className="text-neutral-400 font-bold text-2xl text-right">
+      <Link to={'productList'} className="block text-neutral-400 font-bold text-2xl text-right">
         Xem tất cả
-      </div>
+      </Link>
 
       <div className="flex flex-wrap">
         {products?.slice(0, 8)?.map((pro, index) => (

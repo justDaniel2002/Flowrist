@@ -14,6 +14,7 @@ export const getUserInfo = `${AccountApp}/base/string`
 const Product = `/Product`
 export const delProduct=`${Product}`
 export const getViewProduct = `${Product}/base/getProducts?sortBy=name&pageIndex=1&pageSize=8`
+export const getAllProduct = `${Product}/base/getProducts?sortBy=name&pageIndex=1&pageSize=1000`
 export const getProductDetail = `${Product}/productDetails`
 export const searchProduct = `${Product}/base/search`
 export const FilterProduct = `${Product}/base/filter`

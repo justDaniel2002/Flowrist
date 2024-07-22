@@ -10,7 +10,7 @@ export default function ProductList() {
     const [products, setProducts] = useState([]);
     const [category, setCate] = useState([])
     const [seletedCate, setSelectedCate] = useState("")
-
+    const navigate = useNavigate();
     useEffect(() => {
       getService(`${getAllProduct}${search.trim()!=""?`&search=${search}`:''}${seletedCate.trim()!=""?`&category=${seletedCate}`:''}`).then((result) => setProducts(result.data));
       getService(getAllCate).then((result) => setCate(result.data));

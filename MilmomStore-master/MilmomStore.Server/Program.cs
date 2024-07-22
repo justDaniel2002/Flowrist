@@ -131,7 +131,7 @@ app.UseCors(builder => builder
     .AllowAnyHeader());
 //
 //app.UseSession();
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 //app.UseStaticFile
 /*app.UseStaticFiles(new StaticFileOptions
 {

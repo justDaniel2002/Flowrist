@@ -1,5 +1,6 @@
 export function formatCurrency(amount) {
-  return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " đ";
+  if(amount) return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " đ";
+  
 }
 
 export function objectToPram(obj) {

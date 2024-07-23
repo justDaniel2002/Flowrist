@@ -39,6 +39,7 @@ function ProductManager() {
 
   function updatecloseModal() {
     updatesetIsOpen(false);
+    setUp()
   }
 
   const setUp = useCallback(() => {
@@ -127,7 +128,7 @@ function ProductManager() {
         contentLabel="Chỉnh sửa sản phẩm"
         className="h-4/5 overflow-y-scroll w-2/3 m-auto mt-20"
       >
-        <EditProduct pro={updateproduct} onAbort={updatecloseModal} />
+        <EditProduct pro={updateproduct} onAbort={updatecloseModal}  />
       </Modal>
     </div>
   );

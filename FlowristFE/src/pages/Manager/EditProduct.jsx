@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import MilMomBtn from "../../components/MilMomBtn";
-import { convertDateFormat, convertToCustomFormat, validateProduct } from "../../helper/helper";
+import { convertDateFormat, convertToCustomFormat, convertToIOFormat, validateProduct } from "../../helper/helper";
 import { getService, putService } from "../../api/services";
 import { getAllCate, updateForManager } from "../../api/apis";
 import { toast } from "react-toastify";
@@ -121,10 +121,10 @@ export default function EditProduct({
         <div className="mb-20">
           <div className="mb-2 font-medium">Ngày hết hạn </div>
           <input
-            value={convertDateFormat(product?.expigreenDate)}
+            value={convertDateFormat(product?.expiredDate)}
             type="date"
             onChange={(event) =>
-              setProduct({ ...product, expigreenDate: convertToIOFormat(event.target.value) })
+              setProduct({ ...product, expiredDate: convertToIOFormat(event.target.value) })
             }
             className="p-2 w-4/5 text-neutral-500 border-2 rounded-md"
           />
@@ -132,9 +132,9 @@ export default function EditProduct({
         <div className="mb-20">
           <div className="mb-2 font-medium">Thành phần </div>
           <input
-            value={product?.inggreenient}
+            value={product?.ingredient}
             onChange={(event) =>
-              setProduct({ ...product, inggreenient: event.target.value })
+              setProduct({ ...product, ingredient: event.target.value })
             }
             className="p-2 w-4/5 text-neutral-500 border-2 rounded-md"
           />

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { getAllCate, getAllProduct } from '../api/apis';
 import ProductContainer from '../components/ProductContainer';
 import { getService } from '../api/services';

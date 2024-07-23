@@ -7,7 +7,7 @@ function ProductContainer({ product }) {
   return (
     <div className="rounded-xl shadow-lg">
       <div className="rounded-xl h-60 overflow-hidden">
-        <img className="m-auto" src={product?.imageProducts?product?.imageProducts[0]?.image:DEFAULT_IMG} />
+        <img className="m-auto" src={product?.imageProducts?product?.imageProducts[0]?.image??DEFAULT_IMG:DEFAULT_IMG} />
       </div>
      <div className="p-5">
      <div className="font-medium truncate">{product?.name}</div>

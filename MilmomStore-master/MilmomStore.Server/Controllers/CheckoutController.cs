@@ -65,7 +65,7 @@ namespace MilmomStore.Server.Controllers
             return order;
         }
 
-        [Authorize(Roles = "Customer")]
+        //[Authorize(Roles = "Customer")]
         [HttpGet("vnpay-return")]
         public async Task<IActionResult> HandleVnPayReturn([FromQuery] VnPayReturnModel model)
         {

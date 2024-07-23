@@ -129,9 +129,7 @@ public class OrderDAO : BaseDAO<Order>
         DateTime endOfWeek = startOfWeek.AddDays(6);
 
         var order = _context.Orders
-                            .Where(o => o.OrderDate >= startOfWeek
-                                   && o.OrderDate <= endOfWeek
-                                   && o.Status == OrderStatus.Completed);
+                            .Where(o => o.Status == OrderStatus.Completed);
 
         double totalAmount = await order
                             .SumAsync(o => o.Total);
@@ -165,40 +163,28 @@ public class OrderDAO : BaseDAO<Order>
         DateTime endOfWeek = startOfWeek.AddDays(6);
 
         int ordersReturnOrCancell = await _context.Orders
-                            .Where(o => o.OrderDate >= startOfWeek
-                                   && o.OrderDate <= endOfWeek
-                                   && (o.Status == OrderStatus.Cancelled
+                            .Where(o => o.Status == OrderStatus.Cancelled
                                    || o.Status == OrderStatus.RequestReturn
-                                   || o.Status == OrderStatus.ReturnRefund))
+                                   || o.Status == OrderStatus.ReturnRefund)
                             .CountAsync();
 
         int orders = await _context.Orders
-                            .Where(o => o.OrderDate >= startOfWeek
-                                   && o.OrderDate <= endOfWeek)
                             .CountAsync();
 
         int ordersComplete = await _context.Orders
-                            .Where(o => o.OrderDate >= startOfWeek
-                                   && o.OrderDate <= endOfWeek
-                                   && o.Status == OrderStatus.Completed)
+                            .Where(o => o.Status == OrderStatus.Completed)
                             .CountAsync();
 
         int ordersCancell = await _context.Orders
-                            .Where(o => o.OrderDate >= startOfWeek
-                                   && o.OrderDate <= endOfWeek
-                                   && o.Status == OrderStatus.Cancelled)
+                            .Where(o => o.Status == OrderStatus.Cancelled)
                             .CountAsync();
 
         int ordersReturnRefund = await _context.Orders
-                            .Where(o => o.OrderDate >= startOfWeek
-                                   && o.OrderDate <= endOfWeek
-                                   && o.Status == OrderStatus.ReturnRefund)
+                            .Where(o => o.Status == OrderStatus.ReturnRefund)
                             .CountAsync();
 
         int ordersReport = await _context.Orders
-                            .Where(o => o.OrderDate >= startOfWeek
-                                   && o.OrderDate <= endOfWeek
-                                   && o.ReportID != null)
+                            .Where(o => o.ReportID != null)
                             .CountAsync();
         return (ordersReturnOrCancell,orders,ordersComplete,ordersCancell,ordersReturnRefund,ordersReport);
     }

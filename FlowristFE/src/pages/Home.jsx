@@ -24,7 +24,7 @@ export default function Home() {
         placeholder="Tìm gì hôm nay ?"
       />
 
-      <div className="w-full bg-green-300 rounded-xl py-10 px-20">
+      <div className="w-full bg-green-300 rounded-xl py-10 px-20 mb-10">
         <div className="text-4xl font-medium mb-20">Các loại sản phẩm </div>
 
         <div className="flex">
@@ -41,12 +41,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="my-10 flex">
-        <div className="w-1/5 rounded-xl pr-10">
-          <img className="rounded-xl" src={apphich} />
-        </div>
-        <div className="w-4/5 bg-green-300 rounded-xl"></div>
-      </div>
+      
 
       <OtherProducts />
 

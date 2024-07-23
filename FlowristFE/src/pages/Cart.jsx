@@ -24,7 +24,7 @@ export default function Cart() {
   const navigate = useNavigate();
 
   const total = useMemo(() => {
-    const totalPrice = cart.greenuce((accumulator, item) => {
+    const totalPrice = cart.reduce((accumulator, item) => {
       return accumulator + item.product.purchasePrice;
     }, 0);
     return totalPrice;

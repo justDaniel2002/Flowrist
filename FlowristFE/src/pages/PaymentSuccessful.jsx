@@ -7,6 +7,7 @@ import { getService } from "../api/services";
 import { getOrderById } from "../api/apis";
 import { convertToCustomFormat } from "../helper/helper";
 import Table, { cartHeader, orderHeader } from "../components/Table";
+import { formatCurrency } from "../helpers/helper";
 
 export default function PaymentSuccessful() {
   const [account, setAccount] = useRecoilState(accountAtom);
@@ -19,7 +20,7 @@ export default function PaymentSuccessful() {
       console.log(result);
       setOrder(result.data);
     });
-  });
+  },[]);
   return (
     <div className="py-10 px-5 font-medium">
       <div className="font-bold text-xl text-center my-5">
@@ -55,16 +56,24 @@ export default function PaymentSuccessful() {
               <div className="p-3 pb-10">
                 <div>{order?.shippingInfor?.receiverName}</div>
                 <div className="font-light">
-                  <div><span className="font-medium">Địa chỉ: </span>{" "}
-                  <span>{order?.shippingInfor?.detailAddress}</span></div>
+                  <div>
+                    <span className="font-medium">Địa chỉ: </span>{" "}
+                    <span>{order?.shippingInfor?.detailAddress}</span>
+                  </div>
                   <div className="text-sm">{`${order?.shippingInfor?.province} - ${order?.shippingInfor?.district} - ${order?.shippingInfor?.ward}`}</div>
                 </div>
               </div>
-              
             </div>
           </div>
 
-          <div className="mt-5 border"><Table bg="bg-neutral-100" headerTable={orderHeader} isDelete={false} datas={order?.orderDetails}/></div>
+          <div className="mt-5 border">
+            <Table
+              bg="bg-neutral-100"
+              headerTable={orderHeader}
+              isDelete={false}
+              datas={order?.orderDetails}
+            />
+          </div>
         </div>
         <div className="w-1/3">
           <div className="mb-3 border">
@@ -74,14 +83,16 @@ export default function PaymentSuccessful() {
           <div className="border p-3 mb-3 pb-40">
             <div className="flex justify-between">
               <div className="text-neutral-400">Thành tiền:</div>
-              <div>2.550.000 đ</div>
+              <div>
+                {formatCurrency(order?.total)}
+              </div>
             </div>
 
             <hr className="my-5" />
 
             <div className="flex justify-between items-center">
               <div>Cần thanh toán:</div>
-              <div className="text-xl text-green-600">2.550.000 đ</div>
+              <div className="text-xl text-green-600"> {formatCurrency(order?.total)}</div>
             </div>
             <div className="flex justify-between text-sm text-neutral-400">
               <div>(1 sản phẩm)</div>

@@ -37,7 +37,7 @@ export default function UserManager() {
           className="rounded-lg"
         />
       </div>
-      <ManagerTable datas={accounts} headerTable={userManagerHeader} isDelete={false} approveContent="Thay đổi trạng thái"/>
+      <ManagerTable datas={accounts} headerTable={userManagerHeader} isDelete={false} isApprove={false} approveContent="Thay đổi trạng thái"/>
 
       <div className="mt-20">
         <Pagination />

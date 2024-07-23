@@ -166,7 +166,7 @@ export const statisticalProductTable = [
   {
     content: "Tên sản phẩm",
     id: "productName",
-    width: "w-4/12",
+    width: "w-6/12",
   },
   {
     content: "Số lượng",
@@ -293,8 +293,7 @@ function ManagerTable({
                       : data[header?.id]}
                   </td>
                 ))}
-                {isDelete &&
-                  (isApprove && (
+                {isDelete || isApprove? 
                     <td className="text-center border border-black ">
                       <button onClick={hidden}>
                         <Icon icon="charm:menu-kebab" />
@@ -318,7 +317,7 @@ function ManagerTable({
                         )}
                       </div>
                     </td>
-                  ))}
+                  :""}
               </tr>
             ))}
         </tbody>

@@ -1,9 +1,15 @@
 import React, { useCallback, useEffect, useState } from "react";
 import MilMomBtn from "../../components/MilMomBtn";
-import { convertDateFormat, convertToCustomFormat, convertToIOFormat, validateProduct } from "../../helper/helper";
+import {
+  convertDateFormat,
+  convertToCustomFormat,
+  convertToIOFormat,
+  validateProduct,
+} from "../../helper/helper";
 import { getService, putService } from "../../api/services";
 import { getAllCate, updateForManager } from "../../api/apis";
 import { toast } from "react-toastify";
+import { handleUpload } from "../../cloudinary/cloudinary";
 
 export default function EditProduct({
   onAbort = () => {},
@@ -12,28 +18,32 @@ export default function EditProduct({
 }) {
   const [product, setProduct] = useState(pro);
   const [images, setImages] = useState();
-  
-  const updateProduct = useCallback(() => {
+
+  const updateProduct = useCallback(async () => {
     if (validateProduct(product)) {
       if (images != null && images?.length > 0) {
-        const imgUrl = handleUpload(images[0]);
+        await handleUpload(images[0]).then((imgUrl) => {
+          setProduct({ ...product, imageProducts: [{ image: imgUrl }] });
+        });
 
-        if (imgUrl == undefined) {
-          toast.error("Đăng ảnh thất bại");
-          return;
-        }
-        setProduct({ ...product, imageProducts: [{ image: imgUrl }] });
+        // if (imgUrl == undefined) {
+        //   toast.error("Đăng ảnh thất bại");
+        //   return;
+        // } else {
+        //   console.log("link ảnh", imgUrl);
+        // }
       }
 
-
-      putService(`${updateForManager}?id=${product?.productId}`, product).then(res => {
-        toast.success("Cập nhập thành công")
-        onAbort()
-      });
+      putService(`${updateForManager}?id=${product?.productId}`, product).then(
+        (res) => {
+          toast.success("Cập nhập thành công");
+          onAbort();
+        }
+      );
 
       onSubmit();
     }
-  },[product, images]);
+  }, [product, images]);
 
   return (
     <div className="py-10 px-20 bg-white rounded-md">
@@ -41,7 +51,7 @@ export default function EditProduct({
         Tạo mới sản phẩm
       </div>
       <div className="grid grid-cols-2">
-      <div className="mb-20">
+        <div className="mb-20">
           <div className="mb-2 font-medium">Tên sản phẩm </div>
           <input
             value={product?.name}
@@ -124,7 +134,10 @@ export default function EditProduct({
             value={convertDateFormat(product?.expiredDate)}
             type="date"
             onChange={(event) =>
-              setProduct({ ...product, expiredDate: convertToIOFormat(event.target.value) })
+              setProduct({
+                ...product,
+                expiredDate: convertToIOFormat(event.target.value),
+              })
             }
             className="p-2 w-4/5 text-neutral-500 border-2 rounded-md"
           />
@@ -189,7 +202,6 @@ export default function EditProduct({
             className="p-2 w-4/5 text-neutral-500 border-2 rounded-md"
           />
         </div>
-        
       </div>
       <div className="mb-20">
         <div className="mb-2 font-medium">Hình ảnh sản phẩm</div>

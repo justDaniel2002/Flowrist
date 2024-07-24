@@ -31,7 +31,6 @@ namespace MilmomStore_DataAccessObject
         public async Task<Product?> GetProductByIdAsync(int id)
         {
             return await _context.Set<Product>()
-                .Where(p => p.Status == true)
                 .Include(p => p.Category)
                 .Include(p => p.ImageProducts)
                 .Include(p => p.Ratings)
@@ -57,7 +56,7 @@ namespace MilmomStore_DataAccessObject
         
         public async Task<IEnumerable<Product>> GetProductsAsync(string search = null, double? lowPrice = null, double? highPrice = null, int? category = null, string sortBy = null, int pageIndex = 1, int pageSize = 10)
         {
-            IQueryable<Product> products = _context.Products
+            IQueryable<Product> products = _context.Products.Where(p => p.Status)
                 .Include(p => p.ImageProducts)
                 .Include(p => p.Category)
                 .Include(p => p.Ratings);

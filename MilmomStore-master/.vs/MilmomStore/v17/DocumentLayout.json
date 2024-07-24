@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A7D684B3-1D98-4465-BE9C-BDC39293178B}|Milmom_Service\\Milmom_Service.csproj|d:\\vscode project\\reactjs\u002B.net\\flowrist\\milmomstore-master\\milmom_service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7D684B3-1D98-4465-BE9C-BDC39293178B}|Milmom_Service\\Milmom_Service.csproj|solutionrelative:milmom_service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5FE2958-226B-4B5D-BCE3-F3F89EC37DB5}|MilmomStore.Server\\MilmomStore.Server.csproj|d:\\vscode project\\reactjs\u002B.net\\flowrist\\milmomstore-master\\milmomstore.server\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5FE2958-226B-4B5D-BCE3-F3F89EC37DB5}|MilmomStore.Server\\MilmomStore.Server.csproj|solutionrelative:milmomstore.server\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28F113E0-DA3F-4862-966F-130AEA632B1D}|MilmomStore_DataAccessObject\\MilmomStore_DataAccessObject.csproj|d:\\vscode project\\reactjs\u002B.net\\flowrist\\milmomstore-master\\milmomstore_dataaccessobject\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28F113E0-DA3F-4862-966F-130AEA632B1D}|MilmomStore_DataAccessObject\\MilmomStore_DataAccessObject.csproj|solutionrelative:milmomstore_dataaccessobject\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F979A494-FD37-4B0A-89EB-E94E407B6243}|Milmom_Repository\\Milmom_Repository.csproj|d:\\vscode project\\reactjs\u002B.net\\flowrist\\milmomstore-master\\milmom_repository\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F979A494-FD37-4B0A-89EB-E94E407B6243}|Milmom_Repository\\Milmom_Repository.csproj|solutionrelative:milmom_repository\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D5FE2958-226B-4B5D-BCE3-F3F89EC37DB5}|MilmomStore.Server\\MilmomStore.Server.csproj|d:\\vscode project\\reactjs\u002B.net\\flowrist\\milmomstore-master\\milmomstore.server\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5FE2958-226B-4B5D-BCE3-F3F89EC37DB5}|MilmomStore.Server\\MilmomStore.Server.csproj|solutionrelative:milmomstore.server\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +62,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductDAO.cs",
+              "DocumentMoniker": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\MilmomStore_DataAccessObject\\ProductDAO.cs",
+              "RelativeDocumentMoniker": "MilmomStore_DataAccessObject\\ProductDAO.cs",
+              "ToolTip": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\MilmomStore_DataAccessObject\\ProductDAO.cs",
+              "RelativeToolTip": "MilmomStore_DataAccessObject\\ProductDAO.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAArwCAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T18:53:45.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\Milmom_Service\\Service\\ProductService.cs",
+              "RelativeDocumentMoniker": "Milmom_Service\\Service\\ProductService.cs",
+              "ToolTip": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\Milmom_Service\\Service\\ProductService.cs",
+              "RelativeToolTip": "Milmom_Service\\Service\\ProductService.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T18:53:21.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\MilmomStore.Server\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "MilmomStore.Server\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\MilmomStore.Server\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "MilmomStore.Server\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAEMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T18:52:39.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\Milmom_Repository\\Repository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Milmom_Repository\\Repository\\ProductRepository.cs",
+              "ToolTip": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\Milmom_Repository\\Repository\\ProductRepository.cs",
+              "RelativeToolTip": "Milmom_Repository\\Repository\\ProductRepository.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB0AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T18:52:17.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CheckoutController.cs",
               "DocumentMoniker": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\MilmomStore.Server\\Controllers\\CheckoutController.cs",
               "RelativeDocumentMoniker": "MilmomStore.Server\\Controllers\\CheckoutController.cs",
@@ -59,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "OrderDAO.cs",
               "DocumentMoniker": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\MilmomStore_DataAccessObject\\OrderDAO.cs",
               "RelativeDocumentMoniker": "MilmomStore_DataAccessObject\\OrderDAO.cs",
@@ -67,12 +135,11 @@
               "RelativeToolTip": "MilmomStore_DataAccessObject\\OrderDAO.cs",
               "ViewState": "AQIAAHwAAAAAAAAAAAArwIMAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T02:40:28.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-23T02:40:28.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "D:\\VSCode project\\ReactJS\u002B.Net\\Flowrist\\MilmomStore-master\\Milmom_Repository\\Repository\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Milmom_Repository\\Repository\\OrderRepository.cs",

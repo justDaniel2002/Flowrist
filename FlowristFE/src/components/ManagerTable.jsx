@@ -220,7 +220,7 @@ export const productManagerHeader = [
     width: "w-1/12",
     format: (product) => (
       <span
-        className={`${product?.status ? "text-green-500" : "text-green-500"}`}
+        className={`${product?.status ? "text-green-500" : "text-red-500"}`}
       >
         {product?.status ? "Active" : "Deactive"}
       </span>

@@ -22,8 +22,15 @@ export default function EditProduct({
   const updateProduct = useCallback(async () => {
     if (validateProduct(product)) {
       if (images != null && images?.length > 0) {
-        await handleUpload(images[0]).then((imgUrl) => {
-          setProduct({ ...product, imageProducts: [{ image: imgUrl }] });
+        handleUpload(images[0]).then((imgUrl) => {
+          //setProduct({ ...product, imageProducts: [{ image: imgUrl }] });
+          putService(`${updateForManager}?id=${product?.productId}`, {
+            ...product,
+            imageProducts: [{ image: imgUrl }],
+          }).then((res) => {
+            toast.success("Cập nhập thành công");
+            onAbort();
+          });
         });
 
         // if (imgUrl == undefined) {
@@ -32,14 +39,15 @@ export default function EditProduct({
         // } else {
         //   console.log("link ảnh", imgUrl);
         // }
-      }
-
-      putService(`${updateForManager}?id=${product?.productId}`, product).then(
-        (res) => {
+      } else {
+        putService(
+          `${updateForManager}?id=${product?.productId}`,
+          product
+        ).then((res) => {
           toast.success("Cập nhập thành công");
           onAbort();
-        }
-      );
+        });
+      }
 
       onSubmit();
     }
